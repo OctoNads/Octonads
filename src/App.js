@@ -12,7 +12,6 @@ import Footer from './Components/Footer';
 function App() {
   const triangleRef = useRef(null);
   const sceneRef = useRef(null);
-  const [triangleTop, setTriangleTop] = useState(0);
   const [whalePositions, setWhalePositions] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Start with loading screen
 
@@ -55,7 +54,6 @@ function App() {
         const triangleRect = triangleRef.current.getBoundingClientRect();
         const sceneRect = sceneRef.current.getBoundingClientRect();
         const triangleTopPx = triangleRect.top - sceneRect.top;
-        setTriangleTop(triangleTopPx);
         document.documentElement.style.setProperty('--triangle-top', triangleTopPx + 'px');
         const sceneHeight = sceneRect.height;
         const whaleCount = Math.max(10, Math.floor((sceneHeight - triangleTopPx) / 100));
@@ -69,7 +67,7 @@ function App() {
     updatePositions();
     window.addEventListener('resize', updatePositions);
     return () => window.removeEventListener('resize', updatePositions);
-  }, [setTriangleTop, setWhalePositions]);
+  }, [setWhalePositions]);
 
   // Initial loading screen timer
   useEffect(() => {
