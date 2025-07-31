@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.horizontal-roadmap-section {
+
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.horizontal-roadmap-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.1;
+    animation: slide-texture 120s linear infinite;
+    z-index: 0;
+}
+
+@keyframes slide-texture {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.horizontal-roadmap-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.horizontal-roadmap-title-container h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(3rem, 12vw, 7rem);
+    color: #c19bf5;
+    text-transform: uppercase;
+    -webkit-text-stroke: 3px #1a0e29;
+    text-shadow: 0 0 5px #c19bf5, 0 0 10px #c19bf5, 0 0 20px #e9b2ff, 8px 8px 0px #1a0e29;
+    line-height: 1;
+}
+
+.horizontal-timeline-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 50px 0;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Scrollbar */
+.horizontal-timeline-container::-webkit-scrollbar {
+    height: 20px;
+    
+}
+
+.horizontal-timeline-container::-webkit-scrollbar-track {
+    background-color: #4a1d75;
+    border: 3px solid #1a0e29;
+    border-radius: 15px;
+}
+
+.horizontal-timeline-container::-webkit-scrollbar-thumb {
+    background-color: #360c52;
+    border: 4px solid #1a0e29;
+    border-radius: 15px;
+    box-shadow: inset -3px -3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 8px;
+    width: 100%;
+    background-image: linear-gradient(to right, #4a1d75 40%, rgba(255, 255, 255, 0) 0%);
+    background-position: top;
+    background-size: 20px 4px;
+    background-repeat: repeat-x;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.horizontal-timeline-items {
+    display: inline-flex;
+    position: relative;
+    padding: 0 50px;
+    gap: 60px;
+}
+
+.horizontal-roadmap-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    flex-shrink: 0;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.horizontal-roadmap-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.timeline-dot {
+    width: 40px;
+    height: 40px;
+    background-color: #FFD700;
+    border: 4px solid #1a0e29;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #1a0e29;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.horizontal-roadmap-item:hover .timeline-dot {
+    transform: scale(1.3) rotate(360deg);
+}
+
+.horizontal-roadmap-item:nth-child(odd) {
+    margin-bottom: 40px;
+}
+
+.horizontal-roadmap-item:nth-child(even) {
+    margin-top: 40px;
+    flex-direction: column-reverse;
+}
+
+.horizontal-roadmap-card {
+    background: linear-gradient(145deg, #420d4f, #360c52);
+    border: 4px solid #1a0e29;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px #1a0e29;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.horizontal-roadmap-item:hover .horizontal-roadmap-card {
+    transform: translate(4px, 4px) rotate(2deg);
+    box-shadow: 4px 4px 0px #1a0e29;
+}
+
+.horizontal-roadmap-item:nth-child(even):hover .horizontal-roadmap-card {
+    transform: translate(4px, -4px) rotate(-2deg);
+}
+
+.horizontal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.horizontal-card-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0;
+}
+
+.horizontal-status-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1a0e29;
+}
+
+.status-completed {
+    background-color: #7CFC00;
+}
+
+.status-in-progress {
+    background-color: #FBBF24;
+}
+
+.status-planned {
+    background-color: #60A5FA;
+}
+
+.horizontal-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.horizontal-card-content li {
+    padding: 8px 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.horizontal-locked-content {
+    position: relative;
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.horizontal-roadmap-card:hover .horizontal-locked-content {
+    filter: blur(0);
+}
+
+.horizontal-lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 4px 4px 0 #1a0e29;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.horizontal-roadmap-card:hover .horizontal-lock-overlay {
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+}

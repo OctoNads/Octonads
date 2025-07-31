@@ -1,0 +1,253 @@
+
+
+
+/* Content Styling */
+.content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    overflow: hidden;
+}
+
+.content h1 {
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    font-family: fantasy;
+    text-transform: uppercase;
+    color: #c19bf5;
+    position: absolute;
+    line-height: 1.2;
+    word-spacing: 0.5rem;
+}
+
+.content h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 4px #dad2e9;
+}
+
+.content h1:nth-child(2) {
+    color: #c19bf5;
+    animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(
+            0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%,
+            100% 100%, 0% 100%
+        );
+    }
+    50% {
+        clip-path: polygon(
+            0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%,
+            100% 100%, 0% 100%
+        );
+    }
+}
+
+/* Card Styling */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #160133;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 28px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgb(27, 2, 56);
+    cursor: pointer;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card__image {
+    transform: scale(1.1);
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(35, 2, 66);
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1.2em;
+    margin: 0;
+    color: aqua;
+}
+
+.card__description {
+    display: block;
+    max-height: 4.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    padding: 1em;
+    margin: 0;
+    color: rgb(251, 255, 184);
+    background-color: #14012f;
+}
+
+.social-icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+.social-icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit; /* Matches the surrounding text/icon color */
+}
+
+.social-icon-button:focus {
+  outline: none; /* Optional: removes default focus outline; consider accessibility */
+}
+.card:hover .social-icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-icon {
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .social-icon {
+        font-size: 25px;
+    }
+    /* Optional: Add this if you want a smaller gap */
+    .social-icons {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+/* Entrance Animation for Cards */
+.card-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--index));
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alert Styling */
+.alert {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #c19bf5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+    max-width: 50%;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .card__title {
+        font-size: 1em;
+    }
+    .card__description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .card__title {
+        font-size: 0.9em;
+    }
+    .card__description {
+        font-size: 0.8em;
+    }
+    .social-icon {
+        font-size: 25px;
+    }
+    .alert {
+        font-size: 14px;
+    }
+}
