@@ -12,7 +12,7 @@ import Footer from './Components/Footer';
 function App() {
   const triangleRef = useRef(null);
   const sceneRef = useRef(null);
-  const setTriangleTop = useState(0);
+  const [triangleTop, setTriangleTop] = useState(0);
   const [whalePositions, setWhalePositions] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Start with loading screen
 
@@ -69,7 +69,7 @@ function App() {
     updatePositions();
     window.addEventListener('resize', updatePositions);
     return () => window.removeEventListener('resize', updatePositions);
-  }, []);
+  }, [setTriangleTop, setWhalePositions]);
 
   // Initial loading screen timer
   useEffect(() => {
