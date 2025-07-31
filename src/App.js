@@ -12,7 +12,7 @@ import Footer from './Components/Footer';
 function App() {
   const triangleRef = useRef(null);
   const sceneRef = useRef(null);
-  const [triangleTop, setTriangleTop] = useState(0);
+  const setTriangleTop = useState(0);
   const [whalePositions, setWhalePositions] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Start with loading screen
 
@@ -80,7 +80,6 @@ function App() {
   }, []);
 
   // Constants for rendering
-  const whales = Array.from({ length: 7 }, (_, i) => i + 1);
   const rays = Array.from({ length: 52 }, (_, i) => i + 1);
   const bubbles = Array.from({ length: 100 }, (_, i) => i + 1);
   const wavePath =

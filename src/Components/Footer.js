@@ -138,7 +138,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="logo-section">
-          <a href="#">
+          <a href="/">
             <img
               src="https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
               alt="Company Logo"
