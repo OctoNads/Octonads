@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 // Main TestnetNft component
 const TestnetNft = () => {
     // Video link provided for the NFT card preview
     const videoLink = "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeibkouzjyfrbdty6ri5g6yfktvixgha4uv5wmjcb6f5cjx2pvqmtny";
 
-    // Array of photo links for the supporters section
-    const photos = [
+    // Memoized array of photo links for the supporters section
+    const photos = useMemo(() => [
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreie6flybql6vdxko642ek745v5eefpgyyzdzn7a4xnsjshjcu3yek4',
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiahbzseascjjpk65mxabet4uajhpems3bek3iaxvk4us27lrmgfye',
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreifnjqbzduwnrjzwi2b6fz2shx5p46zqh54w4sry5ouarfgbgfviiy',
@@ -16,8 +16,17 @@ const TestnetNft = () => {
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreic5md2cobtysgxoyuy7umpqbkbqsg6yuqujuhrhx5pgt4d2bqwpnu',
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicn27ufwt7gh4dfj3hdbyhs37fp4oy7udem6uftit26bcvsk26jre',
         'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieqaxaucupwvpeeprnbuvgkcixo7y75blutlrs6ljosau3fauxrfa',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiadbtiyuh4a7ljkd2vmvg6iy6o3jdiqi5dqhc2jukagv3vf5viuoq', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreighdoeyibk7aj4n7zk4ex4vuds2wan6fve5nenh6vni73wpaqoafq', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibcukmtjtcxj4wbb4qveticvomwmhby5nb2hp4r4q4e4nwknzoewq', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibn6djjx3trdaarhsu2rdgxb3yclc2lzhdsljyzt3yxur2uryhmaq', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiexnira2m6kp2i2jc3qhcxtp3jztd55mnyw7ecigeuyyh4wzs2vza', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicbfkq5wm7lgyqyt75kpkclpnggo2emqfjxcmcpf3xkqbzmirg5tu', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieh4qotmqx7z4rurc45h56xbv5xmkff767wsjb6klypnj3fhlijja', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreia5qebgz2aukeknxe6eltq47xhfukzg4qnowutupwmctky7muneua', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e', 'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
-    ];
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiadbtiyuh4a7ljkd2vmvg6iy6o3jdiqi5dqhc2jukagv3vf5viuoq',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreighdoeyibk7aj4n7zk4ex4vuds2wan6fve5nenh6vni73wpaqoafq',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibcukmtjtcxj4wbb4qveticvomwmhby5nb2hp4r4q4e4nwknzoewq',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibn6djjx3trdaarhsu2rdgxb3yclc2lzhdsljyzt3yxur2uryhmaq',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiexnira2m6kp2i2jc3qhcxtp3jztd55mnyw7ecigeuyyh4wzs2vza',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicbfkq5wm7lgyqyt75kpkclpnggo2emqfjxcmcpf3xkqbzmirg5tu',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieh4qotmqx7z4rurc45h56xbv5xmkff767wsjb6klypnj3fhlijja',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreia5qebgz2aukeknxe6eltq47xhfukzg4qnowutupwmctky7muneua',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
+        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
+    ], []);
 
     // State declarations
     const [modalOpen, setModalOpen] = useState(false);
@@ -38,7 +47,7 @@ const TestnetNft = () => {
             zIndex: Math.floor(Math.random() * 10),
         })).sort(() => Math.random() - 0.5);
         setShuffledPhotos(randomizedPhotos);
-    }, []);
+    }, [photos]);
 
     // Modal control functions
     const openModal = (imageSrc) => {
@@ -57,7 +66,6 @@ const TestnetNft = () => {
         setLoadingVideo(false);
         setVideoError('Unable to load video. The link might be broken or unavailable.');
     };
-
     return (
         <div className="main-container">
             <style>

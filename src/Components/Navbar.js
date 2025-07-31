@@ -48,7 +48,7 @@ const Navbar = ({ onHomeClick }) => {
 
   return (
     <nav className="navbar-cartoon" ref={navRef}>
-      <a href="#" className="navbar-logo-cartoon">
+      <a href="/" className="navbar-logo-cartoon">
         <img
           src="https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
           alt="Octonads Logo"
@@ -65,9 +65,9 @@ const Navbar = ({ onHomeClick }) => {
 
       <ul className={`nav-links-cartoon ${isMobileMenuOpen ? 'open' : ''}`}>
         <li className="nav-item-cartoon">
-          <a href="#" onClick={onHomeClick}>HOME</a>
+          <a href="/" onClick={onHomeClick}>HOME</a>
         </li>
-        <li className="nav-item-cartoon"><a href="#" onClick={(e) => {
+        <li className="nav-item-cartoon"><a href="/" onClick={(e) => {
                 e.preventDefault(); // Prevent default anchor behavior
                 document.querySelector('#info-section').scrollIntoView({ behavior: 'smooth' });
             }}>ABOUT US</a></li>
@@ -89,8 +89,8 @@ const Navbar = ({ onHomeClick }) => {
             TOOLS
           </button>
           <div className={`dropdown-menu-cartoon ${openDropdown === 'tools' ? 'show' : ''}`}>
-            <a href="#" className="dropdown-item-cartoon clickable">SnapShot Tool</a>
-            <a href="#" className="dropdown-item-cartoon clickable">Wallet Checker</a>
+            <a href="https://octotools.xyz/snapshot" className="dropdown-item-cartoon clickable">SnapShot Tool</a>
+            <a href="https://octotools.xyz/wallet-checker" className="dropdown-item-cartoon clickable">Wallet Checker</a>
           </div>
         </li>
       </ul>
