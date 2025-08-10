@@ -14,7 +14,7 @@
 .navbar-cartoon {
   font-family: var(--font-family);
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   left: 1rem;
   right: 1rem;
   width: calc(100% - 2rem);

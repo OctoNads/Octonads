@@ -941,6 +941,8 @@ body {
 }
 
 @media (max-width: 768px) {
+
+
   .whaleRotate.size1 {
     transform: rotate(0) scale(0.25);
   }

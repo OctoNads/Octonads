@@ -93,7 +93,7 @@ function App() {
     <div className={`loading-overlay ${!isLoading ? 'hidden' : ''}`}>
       <div className="loader-content">
         <img
-          src="https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
+          src="https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
           alt="Loading Logo"
           className="loader-logo"
         />

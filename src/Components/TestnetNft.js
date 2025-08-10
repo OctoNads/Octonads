@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 
 const TestnetNft = () => {
 
-    const videoLink = "https://coral-keen-goat-993.mypinata.cloud/ipfs/bafybeieutdypultdeo7sm3v5zsylqzasrexpfamaesdhb2jg24uy6anzmu";
+    const videoLink = "https://coral-keen-goat-993.mypinata.cloud/ipfs/bafybeibkouzjyfrbdty6ri5g6yfktvixgha4uv5wmjcb6f5cjx2pvqmtny";
 
     const photos = useMemo(() => [
         'https://coral-keen-goat-993.mypinata.cloud/ipfs/bafkreie6flybql6vdxko642ek745v5eefpgyyzdzn7a4xnsjshjcu3yek4',
