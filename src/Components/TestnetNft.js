@@ -1,41 +1,49 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-// Main TestnetNft component
-const TestnetNft = () => {
-    // Video link provided for the NFT card preview
-    const videoLink = "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeibkouzjyfrbdty6ri5g6yfktvixgha4uv5wmjcb6f5cjx2pvqmtny";
 
-    // Memoized array of photo links for the supporters section
+const TestnetNft = () => {
+
+    const videoLink = "https://coral-keen-goat-993.mypinata.cloud/ipfs/bafybeieutdypultdeo7sm3v5zsylqzasrexpfamaesdhb2jg24uy6anzmu";
+
     const photos = useMemo(() => [
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreie6flybql6vdxko642ek745v5eefpgyyzdzn7a4xnsjshjcu3yek4',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiahbzseascjjpk65mxabet4uajhpems3bek3iaxvk4us27lrmgfye',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreifnjqbzduwnrjzwi2b6fz2shx5p46zqh54w4sry5ouarfgbgfviiy',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreifeia3zulet2quvxhwlyyze4mlwzce65ul2quuad7apb7h5hjxuxa',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicgp5ucpeebqvcdtg62q4gambadpxo7k4valcvyayrkdm47noopa4',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieodm24tzxx4szfwwsw2prpx4vmqoirh4dylrzaoynhzysheynpny',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreic5md2cobtysgxoyuy7umpqbkbqsg6yuqujuhrhx5pgt4d2bqwpnu',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicn27ufwt7gh4dfj3hdbyhs37fp4oy7udem6uftit26bcvsk26jre',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieqaxaucupwvpeeprnbuvgkcixo7y75blutlrs6ljosau3fauxrfa',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiadbtiyuh4a7ljkd2vmvg6iy6o3jdiqi5dqhc2jukagv3vf5viuoq',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreighdoeyibk7aj4n7zk4ex4vuds2wan6fve5nenh6vni73wpaqoafq',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibcukmtjtcxj4wbb4qveticvomwmhby5nb2hp4r4q4e4nwknzoewq',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreibn6djjx3trdaarhsu2rdgxb3yclc2lzhdsljyzt3yxur2uryhmaq',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiexnira2m6kp2i2jc3qhcxtp3jztd55mnyw7ecigeuyyh4wzs2vza',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreicbfkq5wm7lgyqyt75kpkclpnggo2emqfjxcmcpf3xkqbzmirg5tu',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreieh4qotmqx7z4rurc45h56xbv5xmkff767wsjb6klypnj3fhlijja',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreia5qebgz2aukeknxe6eltq47xhfukzg4qnowutupwmctky7muneua',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
-        'https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
+        'https://coral-keen-goat-993.mypinata.cloud/ipfs/bafkreie6flybql6vdxko642ek745v5eefpgyyzdzn7a4xnsjshjcu3yek4',
+        'https://coral-keen-goat-993.mypinata.cloud/ipfs/bafkreiahbzseascjjpk65mxabet4uajhpems3bek3iaxvk4us27lrmgfye',
+        'https://coral-keen-goat-993.mypinata.cloud/ipfs/bafkreidzqjh7hhr6o5bmrj6rh3m5yopmochkixdfly27k5qn27ynr5vgbu',
+        'https://coral-keen-goat-993.mypinata.cloud/ipfs/bafkreigmro7bwohhzn2msnolzbt2xnukasw2y67bordnfclv6fcfbtthqm',
+        'https://yellow-payable-kangaroo-324.mypinata.cloud/ipfs/bafkreihkefppnhnkcj22yvdmgfbnklsf44p2oyvdfa2ie3ollr6pnhlyva',
+        'https://yellow-payable-kangaroo-324.mypinata.cloud/ipfs/bafkreihkefppnhnkcj22yvdmgfbnklsf44p2oyvdfa2ie3ollr6pnhlyva',
+        'https://yellow-payable-kangaroo-324.mypinata.cloud/ipfs/bafkreiew37exca3ugseb6kvgmgjlgqnoynmtexotgrzl5sjp7brdn4ahjy',
+        'https://yellow-payable-kangaroo-324.mypinata.cloud/ipfs/bafkreietqghzob75kclqs5d2bfm6ji6np25rfkxkg2uuai6cqhutunltm4',
+        'https://yellow-payable-kangaroo-324.mypinata.cloud/ipfs/bafkreifq3dcw2oo3z26lqhe4w3wzmyt6cj3stnex7ggvl5fg7imjcl2zte',
+        'https://red-kind-moose-832.mypinata.cloud/ipfs/bafkreieodm24tzxx4szfwwsw2prpx4vmqoirh4dylrzaoynhzysheynpny',
+        'https://red-kind-moose-832.mypinata.cloud/ipfs/bafkreic2qydqixtik32m6jdqu2yemo3skapl4cuvfxuq4ahy73bk7se4ru',
+        'https://red-kind-moose-832.mypinata.cloud/ipfs/bafkreicgp5ucpeebqvcdtg62q4gambadpxo7k4valcvyayrkdm47noopa4',
+        'https://red-kind-moose-832.mypinata.cloud/ipfs/bafkreicr577frdjfu4sh5siifshv6s3uklesizjt6n2psba2gskbkpvi7y',
+        'https://red-kind-moose-832.mypinata.cloud/ipfs/bafkreibpvzs7v7xytwvidcfuha5damn7usq7mbnif6mqmhfzb23jb4hl2u',
+        'https://red-urgent-whippet-655.mypinata.cloud/ipfs/bafkreicn27ufwt7gh4dfj3hdbyhs37fp4oy7udem6uftit26bcvsk26jre',
+        'https://red-urgent-whippet-655.mypinata.cloud/ipfs/bafkreihcgpldjeb53r4vx42g6jsbs7lw42jbiawncjd7oda2pvw6vbpwby',
+        'https://red-urgent-whippet-655.mypinata.cloud/ipfs/bafkreiadbtiyuh4a7ljkd2vmvg6iy6o3jdiqi5dqhc2jukagv3vf5viuoq',
+        'https://red-urgent-whippet-655.mypinata.cloud/ipfs/bafkreifeia3zulet2quvxhwlyyze4mlwzce65ul2quuad7apb7h5hjxuxa',
+        'https://red-urgent-whippet-655.mypinata.cloud/ipfs/bafkreic5md2cobtysgxoyuy7umpqbkbqsg6yuqujuhrhx5pgt4d2bqwpnu',
+        'https://rose-historic-jaguar-149.mypinata.cloud/ipfs/bafkreieqaxaucupwvpeeprnbuvgkcixo7y75blutlrs6ljosau3fauxrfa',
+        'https://rose-historic-jaguar-149.mypinata.cloud/ipfs/bafkreifnjqbzduwnrjzwi2b6fz2shx5p46zqh54w4sry5ouarfgbgfviiy',
+        'https://rose-historic-jaguar-149.mypinata.cloud/ipfs/bafkreibcukmtjtcxj4wbb4qveticvomwmhby5nb2hp4r4q4e4nwknzoewq',
+        'https://rose-historic-jaguar-149.mypinata.cloud/ipfs/bafkreia5qebgz2aukeknxe6eltq47xhfukzg4qnowutupwmctky7muneua',
+        'https://rose-historic-jaguar-149.mypinata.cloud/ipfs/bafkreieh4qotmqx7z4rurc45h56xbv5xmkff767wsjb6klypnj3fhlijja',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreicbfkq5wm7lgyqyt75kpkclpnggo2emqfjxcmcpf3xkqbzmirg5tu',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreiexnira2m6kp2i2jc3qhcxtp3jztd55mnyw7ecigeuyyh4wzs2vza',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreibn6djjx3trdaarhsu2rdgxb3yclc2lzhdsljyzt3yxur2uryhmaq',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreighdoeyibk7aj4n7zk4ex4vuds2wan6fve5nenh6vni73wpaqoafq',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreigb4xcdczrdprmod2phaccmotroyrmrz6qqqrm5ojik3uonhbgwfq',
+        'https://fuchsia-advanced-junglefowl-526.mypinata.cloud/ipfs/bafkreigf6uyc4azra4px54t4ob3iaszz2zfeobxruc7ktzbo2wbd2rg37e',
     ], []);
 
-    // State declarations
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
     const [shuffledPhotos, setShuffledPhotos] = useState([]);
     const [loadingVideo, setLoadingVideo] = useState(true);
     const [videoError, setVideoError] = useState('');
 
-    // useEffect to shuffle and style photos on mount
     useEffect(() => {
         const randomizedPhotos = photos.map(url => ({
             url,
@@ -49,7 +57,7 @@ const TestnetNft = () => {
         setShuffledPhotos(randomizedPhotos);
     }, [photos]);
 
-    // Modal control functions
+
     const openModal = (imageSrc) => {
         setSelectedImage(imageSrc);
         setModalOpen(true);
@@ -60,7 +68,7 @@ const TestnetNft = () => {
         setSelectedImage('');
     };
 
-    // Video handlers
+
     const handleVideoLoaded = () => setLoadingVideo(false);
     const handleVideoError = () => {
         setLoadingVideo(false);

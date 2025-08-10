@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="logo-section">
           <a href="/">
             <img
-              src="https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
+              src="https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafkreiguhll5qwfac6x36v362nv2mhgl7so45dd262zpulwq7c4tfwbedq"
               alt="Company Logo"
               className="logo-image"
               onError={(e) => {

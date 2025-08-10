@@ -1,43 +1,41 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
-// This is the main App component that renders our slider.
-// In a real application, you would import NftSlider and use it like this.
 export default function App() {
   return <NftSlider />;
 }
 
-// Array of NFT image URLs. This data would typically come from an API.
+
 const imageUrls = [
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeifvsnifsfvv5yertz2xanhvrntt3b4fewhnemqnjv6qv7cm7gkm6e",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeicgle26d3zqctamgwk2oxidqkpgr5wx35ufaedx4dy5u5pvnf2nh4",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeigfcbqx4cm3oonegj2jcaewcxgfo2qr5k23gqwraoykrvsqmjnt6i",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeib5npxhytmj64lmgxwivvyjxbjuntg7zh5y4ph6fk6w2tzdcibrem",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeielxmveppc5p5fs4fxo3gnfdjsoaq2uvaeighdrbjb742gntwtkji",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeihiqh2xbmzmjk3wry75ulq3y7pgsxvbw7ffwvgbdsjbhpvtjhnusa",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeidv5fm6c56w7nk3mj5un2ajh37npxjzdeinmn4lkrpba2od7lln5a",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeidenjrail4u2dqj4lm5ymgxlme55lbw3q6j2jt5ws4hgfsd5davnq",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeie3mkjlc4fdhjw5cfyikeii6s7ttv7w2xnfpqrttq3is3psvt4zp4",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeih3u7hfqcftrx3k34tx266nlg26jdztihcd65dbzqtvby527xuep4",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeibxnh3b7fynoh46kxsobadecl543xhezwkosfapqgb3gzwrrmcjcq",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeia4n5wtxkybfpx6ulf4azvzfux5j2iguzuyufggbm75lua4ut6dxe",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeihamqi3s4ck5mjyq6n3w53o3htb2v46ccx7zeragtixwvskrez534",
-  "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeiha24qj57jphrly6mgplikdehyvu3a7b4dxx4kap724gfgss7ydfi"
+  "https://chocolate-just-flea-552.mypinata.cloud/ipfs/bafybeifvsnifsfvv5yertz2xanhvrntt3b4fewhnemqnjv6qv7cm7gkm6e",
+  "https://chocolate-just-flea-552.mypinata.cloud/ipfs/bafybeicgle26d3zqctamgwk2oxidqkpgr5wx35ufaedx4dy5u5pvnf2nh4",
+  "https://chocolate-just-flea-552.mypinata.cloud/ipfs/bafybeigfcbqx4cm3oonegj2jcaewcxgfo2qr5k23gqwraoykrvsqmjnt6i",
+  "https://chocolate-just-flea-552.mypinata.cloud/ipfs/bafkreiaohxtskmsmjoypgmrzsuiqw5lq26py5oxx54mi4xsdvzxnnsekji",
+  "https://chocolate-just-flea-552.mypinata.cloud/ipfs/bafybeib5npxhytmj64lmgxwivvyjxbjuntg7zh5y4ph6fk6w2tzdcibrem",
+  "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeielxmveppc5p5fs4fxo3gnfdjsoaq2uvaeighdrbjb742gntwtkji",
+  "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeihiqh2xbmzmjk3wry75ulq3y7pgsxvbw7ffwvgbdsjbhpvtjhnusa",
+  "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeidv5fm6c56w7nk3mj5un2ajh37npxjzdeinmn4lkrpba2od7lln5a",
+  "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeidenjrail4u2dqj4lm5ymgxlme55lbw3q6j2jt5ws4hgfsd5davnq",
+  "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeie3mkjlc4fdhjw5cfyikeii6s7ttv7w2xnfpqrttq3is3psvt4zp4",
+  "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeih3u7hfqcftrx3k34tx266nlg26jdztihcd65dbzqtvby527xuep4",
+  "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeibxnh3b7fynoh46kxsobadecl543xhezwkosfapqgb3gzwrrmcjcq",
+  "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeihamqi3s4ck5mjyq6n3w53o3htb2v46ccx7zeragtixwvskrez534",
+  "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeia4n5wtxkybfpx6ulf4azvzfux5j2iguzuyufggbm75lua4ut6dxe",
+  "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeiha24qj57jphrly6mgplikdehyvu3a7b4dxx4kap724gfgss7ydfi"
+
 ];
 
 const NftSlider = () => {
-  // State to hold the list of items (images)
+
   const [items, setItems] = useState(imageUrls);
-  // State to control the animation direction ('next', 'prev', or '')
+
   const [direction, setDirection] = useState('');
-  
-  // Refs to hold interval IDs and the carousel DOM element
+
+
   const autoSlideIntervalRef = useRef(null);
   const resumeTimeoutRef = useRef(null);
   const carouselRef = useRef(null);
 
-  /**
-   * Stops the automatic sliding interval.
-   */
+
   const stopAutoSlide = useCallback(() => {
     if (autoSlideIntervalRef.current) {
       clearInterval(autoSlideIntervalRef.current);
@@ -47,13 +45,10 @@ const NftSlider = () => {
     }
   }, []);
 
-  /**
-   * Handles the 'next' button click.
-   * It sets the animation direction and rotates the items array.
-   */
+
   const handleNextClick = useCallback(() => {
     setDirection('next');
-    // Move the first item to the end of the array
+
     setItems(prevItems => {
       const newItems = [...prevItems];
       newItems.push(newItems.shift());
@@ -62,23 +57,17 @@ const NftSlider = () => {
   }, []);
 
 
-  /**
-   * Starts the automatic sliding interval.
-   */
   const startAutoSlide = useCallback(() => {
-    stopAutoSlide(); // Ensure no multiple intervals are running
+    stopAutoSlide();
     autoSlideIntervalRef.current = setInterval(() => {
       handleNextClick();
-    }, 5000); // Time between auto-slides
-  }, [stopAutoSlide, handleNextClick]); 
+    }, 5000);
+  }, [stopAutoSlide, handleNextClick]);
 
-  /**
-   * Handles the 'previous' button click.
-   * It sets the animation direction and rotates the items array in reverse.
-   */
+
   const handlePrevClick = () => {
     setDirection('prev');
-    // Move the last item to the beginning of the array
+
     setItems(prevItems => {
       const newItems = [...prevItems];
       newItems.unshift(newItems.pop());
@@ -86,12 +75,11 @@ const NftSlider = () => {
     });
   };
 
-  // Effect to manage auto-sliding and event listeners for hover
   useEffect(() => {
     const carouselElement = carouselRef.current;
     if (!carouselElement) return;
 
-    // Start auto-sliding when the component mounts
+
     startAutoSlide();
 
     const handleMouseEnter = () => stopAutoSlide();
@@ -100,7 +88,6 @@ const NftSlider = () => {
     carouselElement.addEventListener('mouseenter', handleMouseEnter);
     carouselElement.addEventListener('mouseleave', handleMouseLeave);
 
-    // Cleanup function to remove listeners and intervals when the component unmounts
     return () => {
       stopAutoSlide();
       carouselElement.removeEventListener('mouseenter', handleMouseEnter);
@@ -108,21 +95,20 @@ const NftSlider = () => {
     };
   }, [startAutoSlide, stopAutoSlide]);
 
-  // Effect to reset the animation class after it has finished
   useEffect(() => {
     if (direction) {
-      // The longest animation duration is 1.1s (from the CSS)
+
       const timer = setTimeout(() => {
         setDirection('');
       }, 1100);
       return () => clearTimeout(timer);
     }
-  }, [items, direction]); // This effect runs whenever the items array or direction changes
+  }, [items, direction]);
 
 
   return (
     <>
-      {/* All the CSS is placed within a style tag for a self-contained component */}
+
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         
@@ -346,8 +332,8 @@ const NftSlider = () => {
                   alt={`NFT artwork ${index + 1}`}
                   onError={(e) => {
                     // Fallback in case an image fails to load
-                    e.target.onerror = null; 
-                    e.target.src="https://placehold.co/600x400/EEE/31343C?text=Image+Not+Found";
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/600x400/EEE/31343C?text=Image+Not+Found";
                   }}
                 />
               </div>

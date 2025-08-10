@@ -20,19 +20,19 @@ const Info = () => {
         '1': {
             title: 'The Origin of OCTONADS',
             text: "He was a simple man—gentle, in love, but powerless. Life took everything: his money, his pride, his girl. “You’re too weak,” she said—and left. Broken, he sailed into the ocean, ready to disappear forever. But as he sank into the depths, something ancient found him—an octopus from the abyss, wise and powerful. Touched by his pain, the creature merged with him, fusing its strength and mind into his soul. When he returned to the surface, he wasn’t a man anymore. He was OctoNad—a reborn being of will and wisdom, wearing the octopus like a living mask. Now, he walks the world, awakening others who’ve lost it all—giving them the same gift. Not just NFTs",
-            image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeihcprz45pkgii7zfouepfmwreltdaxmeywi7dixmy4q3fgyp6sy4e",
+            image: "https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafybeihcprz45pkgii7zfouepfmwreltdaxmeywi7dixmy4q3fgyp6sy4e",
             type: 'a'
         },
         '2': {
             title: 'WHY on MONAD ?',
             text: '• Low Fees: Monad’s sub-cent transaction fees make NFT minting and trading affordable.\n• High Speed: Supports 10,000 TPS with 1-second block times for fast NFT drops.\n• EVM Compatibility: Seamlessly integrates with Ethereum tools for easy NFT development.\n• Growing Community: Active NFT projects and events like Monad NFT Week boost visibility.\n• Early Adopter Perks: Potential whitelist spots and airdrops for early Monad NFT launches.',
-            image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeifpxtqi7nyy24mofog7p3v7pevyhqvkre3ducmxtx4s6dpk66g6ge",
+            image: "https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafybeifpxtqi7nyy24mofog7p3v7pevyhqvkre3ducmxtx4s6dpk66g6ge",
             type: 'b'
         },
         '3': {
             title: 'WHY CHOOSE OCTONADS?',
             text: 'Our Vision : To create a globally recognized brand Web2 and Web3, delivering innovative products beyond a PFP collection. Our Mission is to Build a Vibrant Community, Reward Supporters & Believers throughout Time , and drive creativity in the digital landscape. Our Aim to Create an Innovative and Inspired profucts in Web2-Web3 just like Pudgy Penguins on Web2 and MadLads on Web3. We do have an expert team which can build & Manage things . So we are on a Mission to Make OctoLabs as a Brand (TBA). Join Us and Be part of a revolutionary brand shaping the future of digital ecosystems.',
-            image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeif52ofeabvdfjktzinpqi4sjp5jw653aungb7hxq5tzzrvjmi7ohi",
+            image: "https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafybeif52ofeabvdfjktzinpqi4sjp5jw653aungb7hxq5tzzrvjmi7ohi",
             type: 'c'
         },
     };
