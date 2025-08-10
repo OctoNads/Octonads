@@ -9,28 +9,28 @@ export default function Team() {
         {
             name: "Mike (Founder)",
             image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeihamqi3s4ck5mjyq6n3w53o3htb2v46ccx7zeragtixwvskrez534",
-            description: "Jessica is a software engineer with a passion for front-end development.",
+            description: "Mike Is a Professional Software Devloper Working in MNCs",
             twitter: "https://x.com/Mike__Nad",
             discord: "octo_mike"
         },
         {
             name: "Flork (CTO)",
             image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeihiqh2xbmzmjk3wry75ulq3y7pgsxvbw7ffwvgbdsjbhpvtjhnusa",
-            description: "Kim specializes in user experience design and loves making things look beautiful.",
+            description: "Flork is College dropout , been in crypto space from 2018. ",
             twitter: " https://x.com/Flork_Nad",
             discord: "flork_nad"
         },
         {
             name: "Cocrypt (Dev)",
             image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeielxmveppc5p5fs4fxo3gnfdjsoaq2uvaeighdrbjb742gntwtkji",
-            description: "Sam is a full-stack developer with a strong background in backend technologies.",
+            description: "Cocrypt is a full-stack developer with a strong background in backend technologies.",
             twitter: "https://x.com/cocrypt_",
             discord: "cocrypt"
         },
         {
             name: "Anina (Artist)",
             image: "https://peach-nearby-kiwi-945.mypinata.cloud/ipfs/bafybeie3mkjlc4fdhjw5cfyikeii6s7ttv7w2xnfpqrttq3is3psvt4zp4",
-            description: "Dan is an experienced cloud engineer specializing in distributed systems.",
+            description: "Anina is Just an 13 year old girl Artist, His First art as NFt",
             twitter: "https://x.com/AninaNads",
             discord: "octo_anina"
         },

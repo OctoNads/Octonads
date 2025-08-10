@@ -147,7 +147,7 @@ function App() {
         <img src={OctonadsImage} alt="Octonads_Web" className="main-image" />
         <div className="triangleContainer" ref={triangleRef}>
           <svg width="200%" height="100%" viewBox="0 0 3000 100" preserveAspectRatio="none">
-            <path d={wavePath} fill="rgb(88, 50, 159)" />
+            <path d={wavePath} fill="rgb(65, 35, 117)" />
           </svg>
         </div>
         <div className="gradientContainer">

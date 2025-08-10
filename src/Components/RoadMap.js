@@ -31,11 +31,11 @@ const RoadMap = () => {
   }, []);
 
   const roadmapData = [
-    { quarter: "INTRODUCING", status: "Done!", statusClass: "status-completed", tasks: ["Socials Launch", "OCTONADS TESTNET NFT", "BETA TOOLS INTRODUCE"], isLocked: false },
-    { quarter: "MAINNET PREPATIONS", status: "Doing It!", statusClass: "status-in-progress", tasks: ["Building Community","Dicord Events", "Projects COLLABS", "OctoNads Web Launch"], isLocked: false },
-    { quarter: "THE UTILITY BEGAN", status: "Next Up!", statusClass: "status-planned", tasks: ["Staking Platform", "Intoduce Token!", "Game Time!"], isLocked: false },
-    { quarter: "THE REWARD", status: "The Future!", statusClass: "status-planned", tasks: ["You're The Boss!", "Metaverse Land", "New Octonads!?"], isLocked: true },
-   { quarter: "THE REWARD", status: "The Future!", statusClass: "status-planned", tasks: ["You're The Boss!", "Metaverse Land", "New Octonads!?"], isLocked: true },
+    { quarter: "INTRODUCING", status: "Done!", statusClass: "status-completed", tasks: ["SOCIAL LAUNCHES", "INRODUCE OCTONADS","BUILD TEAM & COMMUNITY " , "SERVER OPENING"], isLocked: false },
+    { quarter: "TESTNET PARTICIPATION", status: "Done!", statusClass: "status-completed", tasks: ["INTRODUCE/MINT OCTOG PASS", "PROJECTS COLLABS","DISCORD EVENTS", "INTRODUCE OCTO TOOLS"], isLocked: false },
+    { quarter: "MAINNET PREPATIONS", status: "Doing It!", statusClass: "status-in-progress", tasks: ["OCTONADS WEB LAUNCH","DISTRIBUTION OF FINAL SPOTS", "FINAL WALLET COLLECTION / LAUNCHPAD","REVEAL COLLECTION DETAILS", "MAINNET COLLECTION LAUNCH"], isLocked: false },
+    { quarter: "THE UTILITY BEGAN", status: "Next Up!", statusClass: "status-planned", tasks: ["SETUP POST MINT SERVER","INTRODUCE DYNAMIC STAKING PLATFORM", "INTRODUCE NEW TOOL", "MINT FUNDS BACK (MFB)"], isLocked: true},
+    { quarter: "THE REWARD", status: "The Future!", statusClass: "status-planned", tasks: ["", "", ""], isLocked: true },
   ];
 
   return (
