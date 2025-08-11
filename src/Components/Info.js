@@ -31,7 +31,7 @@ const Info = () => {
         },
         '3': {
             title: 'WHY CHOOSE OCTONADS?',
-            text: 'Our Vision : To create a globally recognized brand Web2 and Web3, delivering innovative products beyond a PFP collection. Our Mission is to Build a Vibrant Community, Reward Supporters & Believers throughout Time , and drive creativity in the digital landscape. Our Aim to Create an Innovative and Inspired profucts in Web2-Web3 just like Pudgy Penguins on Web2 and MadLads on Web3. We do have an expert team which can build & Manage things . So we are on a Mission to Make OctoLabs as a Brand (TBA). Join Us and Be part of a revolutionary brand shaping the future of digital ecosystems.',
+            text: 'Our Vision : To create a globally recognized brand Web2 and Web3, delivering innovative products beyond a PFP collection. Our Mission is to Build a Vibrant Community, Reward Supporters & Believers throughout Time , and drive creativity in the digital landscape. Our Aim to Create an Innovative and Inspired products in Web2-Web3 just like Pudgy Penguins on Web2 and MadLads on Web3. We do have an expert team which can build & Manage things . So we are on a Mission to Make OctoLabs as a Brand (TBA). Join Us and Be part of a revolutionary brand shaping the future of digital ecosystems.',
             image: "https://coffee-impossible-bee-798.mypinata.cloud/ipfs/bafybeif52ofeabvdfjktzinpqi4sjp5jw653aungb7hxq5tzzrvjmi7ohi",
             type: 'c'
         },
@@ -148,7 +148,9 @@ const Info = () => {
                     transform: scale(1.1);
                 }
             
-                .timeline-item.i-is-active .timeline-date { color: #d8b4fe; }
+                .timeline-item.i-is-active .timeline-date { color: #d8b4fe; 
+        
+                }
                 .timeline-block {
                     width: 55px; height: 55px;
                     border: 2px solid var(--border-color);

@@ -54,9 +54,9 @@ body {
   top: 87vh;
   left: 53%;
   transform: translate(-50%, -85%);
-  width: 45vw;
-  max-width: 650px;
-  min-width: 490px;
+  width: 80vw;
+  max-width: 800px;
+  min-width: 500px;
   height: auto;
   object-fit: contain;
   z-index: 10;
@@ -974,4 +974,16 @@ body {
   .hidden-on-small {
     display: none;
   }
+}
+
+
+@media (max-width: 1024px) {
+
+.main-image {
+ 
+  max-width: 750px;
+  
+  
+}
+
 }

@@ -9,7 +9,7 @@ export default function Team() {
         {
             name: "Mike (Founder)",
             image: "https://chocolate-negative-toad-428.mypinata.cloud/ipfs/bafybeihamqi3s4ck5mjyq6n3w53o3htb2v46ccx7zeragtixwvskrez534",
-            description: "Mike Is a Professional Software Devloper Working in MNCs",
+            description: "Mike Is a Professional Software Developer and also was a Part of Some WEb3 Products.",
             twitter: "https://x.com/Mike__Nad",
             discord: "octo_mike"
         },
@@ -23,14 +23,14 @@ export default function Team() {
         {
             name: "Cocrypt (Dev)",
             image: "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeielxmveppc5p5fs4fxo3gnfdjsoaq2uvaeighdrbjb742gntwtkji",
-            description: "Cocrypt is a full-stack developer with a strong background in backend technologies.",
+            description: "Cocrypt is a full-stack WEB DEV with a strong background in backend technologies.",
             twitter: "https://x.com/cocrypt_",
             discord: "cocrypt"
         },
         {
             name: "Anina (Artist)",
             image: "https://jade-defensive-platypus-709.mypinata.cloud/ipfs/bafybeie3mkjlc4fdhjw5cfyikeii6s7ttv7w2xnfpqrttq3is3psvt4zp4",
-            description: "Anina is Just an 13 year old girl Artist, His First art as NFt",
+            description: "Anina the girl Artist, Her First art as NFt in Web3 space",
             twitter: "https://x.com/AninaNads",
             discord: "octo_anina"
         },

@@ -185,7 +185,7 @@ const TestnetNft = () => {
                     font-weight: 700;
                     color: #1e40af;
                     margin-bottom: 1.5rem;
-                    border-bottom: 2px solid #60a5fa;
+                    border-bottom: 2px solid #e860faff;
                     padding-bottom: 0.5rem;
                 }
 
@@ -464,8 +464,10 @@ const TestnetNft = () => {
                                 <span className="nft-details-value">999 Units </span>
                             </p>
                             <p className="nft-details-item">
-                                <span className="nft-details-label">Purpose:</span>
-                                <span className="nft-details-value"> Access to a First mint (PHASE) for our Mainnet NFT Mint (FCFS).</span>
+                                <span className="nft-details-label">Utility:</span>
+                                <span className="nft-details-value"> Access to Mint on (First PHASE) for our Mainnet NFT Mint (FCFS).
+                                    Mint at Discounted Price. Participation at Collabs/ Giveaway with 5x Entries .
+                                </span>
                             </p>
                         </div>
                     </div>

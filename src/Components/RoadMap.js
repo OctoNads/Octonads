@@ -35,7 +35,7 @@ const RoadMap = () => {
     { quarter: "TESTNET PARTICIPATION", status: "Done!", statusClass: "status-completed", tasks: ["INTRODUCE/MINT OCTOG PASS", "PROJECTS COLLABS","DISCORD EVENTS", "INTRODUCE OCTO TOOLS"], isLocked: false },
     { quarter: "MAINNET PREPATIONS", status: "Doing It!", statusClass: "status-in-progress", tasks: ["OCTONADS WEB LAUNCH","DISTRIBUTION OF FINAL SPOTS", "FINAL WALLET COLLECTION / LAUNCHPAD","REVEAL COLLECTION DETAILS", "MAINNET COLLECTION LAUNCH"], isLocked: false },
     { quarter: "THE UTILITY BEGAN", status: "Next Up!", statusClass: "status-planned", tasks: ["SETUP POST MINT SERVER","INTRODUCE DYNAMIC STAKING PLATFORM", "INTRODUCE NEW TOOL", "MINT FUNDS BACK (MFB)"], isLocked: true},
-    { quarter: "THE REWARD", status: "The Future!", statusClass: "status-planned", tasks: ["", "", ""], isLocked: true },
+    { quarter: "THE REWARD SYSTEM", status: "The Future!", statusClass: "status-planned", tasks: ["", "", ""], isLocked: true },
   ];
 
   return (

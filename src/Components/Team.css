@@ -133,7 +133,7 @@
 
 .card__description {
     display: block;
-    max-height: 4.5em;
+    max-height: 6.5em;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.5;
